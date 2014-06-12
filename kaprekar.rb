@@ -15,19 +15,14 @@ def kaprekar?(k)
   k2 = k ** 2
 
   n = k.to_s.length
-  nOfK2 = k2.to_s.length
-  string_k2 = k2.split(//)
-  leftA = (k2.to_s[0]..k2.to_s[n-1]).to_i
-  puts leftA
-  leftB = (k2.to_s[0]..k2.to_s[n-2]).to_i
-  puts leftB
-  right = (string_k2[(n-1..-1)]).join.to_i
-  puts right
-  if (leftA + right == k) || (leftB + right == k)
-    true
-  else
-    false
-  end
-end
+  string_k2 = k2.to_s
 
-kaprekar?(46)
+  leftA = string_k2[(0..n-1)].to_i
+
+  leftB = string_k2[(0..n-2)].to_i
+
+  right = string_k2[(-1-(n-1)..-1)].to_i 
+
+  (leftA + right == k) || (leftB + right == k)
+
+end
