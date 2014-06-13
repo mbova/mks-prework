@@ -22,6 +22,14 @@ class Cookbook
 		end
 	end
 
+	def print_cookbook
+		@recipes.each do |x| 
+			print "Title: #{x.title}\n"
+			print "Ingredients: #{x.ingredients.join(', ')}\n"
+			print "Steps: #{x.steps.join("\n")}"
+		end
+	end
+
 end
 
 class Recipe
