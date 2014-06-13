@@ -24,3 +24,6 @@ p mex_cuisine.recipes
 
 mex_cuisine.recipe_titles # Veggie Burrito
 mex_cuisine.recipe_ingredients # These are the ingredients for Veggie Burrito: ["tortilla", "bean"]
+
+pizza = Recipe.new("Margherita Pizza", ["flour, water, egg, olive oil, garlic, tomatoes, mozarella, basil"], ["set oven as high as possible", "roll out dough onto baking sheet", "chop tomatoes and put on dough", "sprinkle mozarella", "put in oven for 5 minutes", "remove and sprinkle chopped basil on top"])
+mex_cuisine.add_recipe(pizza)
