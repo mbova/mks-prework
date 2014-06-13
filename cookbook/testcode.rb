@@ -21,3 +21,6 @@ p burrito.ingredients # ["tortilla", "tomatoes"]
 mex_cuisine.recipes # []
 mex_cuisine.add_recipe(burrito)
 p mex_cuisine.recipes
+
+mex_cuisine.recipe_titles # Veggie Burrito
+mex_cuisine.recipe_ingredients # These are the ingredients for Veggie Burrito: ["tortilla", "bean"]
