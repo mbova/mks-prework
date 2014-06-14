@@ -23,10 +23,17 @@ class Cookbook
 	end
 
 	def print_cookbook
-		@recipes.each do |x| 
+		@recipes.each do |x|
+			
 			print "Title: #{x.title}\n"
 			print "Ingredients: #{x.ingredients.join(', ')}\n"
-			print "Steps: #{x.steps.join("\n")}"
+			#print "Steps: #{x.steps.map { |k| "#{k.index}: #{k}" }.join("\n")}"
+			indexCount = 1
+			print "Steps:" + "\n"
+			x.steps.each do |v|
+				print "#{indexCount}: " + v + "\n"
+				indexCount += 1
+			end
 		end
 	end
 
