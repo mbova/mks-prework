@@ -26,7 +26,7 @@ class Cookbook
 		@recipes.each do |x|
 			print "Title: #{x.title}\n"
 			print "Ingredients: #{x.ingredients.join(', ')}\n"
-			print "Steps:" + "\n"
+			print "Steps:\n"
 			x.steps.each_with_index { |v, i| print "#{i + 1}: " + v + "\n" }
 		end
 	end
